@@ -1,6 +1,5 @@
-# Surūšiuotų ir atspausdintų kvadratų sąrašą atbulai
-#
-# Naudoti map, filter arba comprehension, sum, min, max, mean, median, %
+# Naudoti map, filter arba comprehension,
+# sum, min, max, mean, median, %
 
 from statistics import mean, median
 
@@ -32,11 +31,22 @@ from statistics import mean, median
 # Šį sąrašą (list masyvą) priskirti naujam kintamajam.
 
 # su map funkcija
-paprasti_sk = (range(51))
-pakelta_kvadratu = map(lambda x: x**2, paprasti_sk)
-print(list(pakelta_kvadratu))
+paprasti_sk = range(51)
+#pakelta_kvadratu = map(lambda x: x**2, paprasti_sk)
+#print(list(pakelta_kvadratu))
 
 # 1.5. Su kvadratų sąrašu (nauju kintamuoju) atliktų šiuos veiksmus:
-#  atspausdintų sumą, mažiausią ir didžiausią skaičių, vidurkį, medianą
+#  atspausdintų sumą, mažiausią ir didžiausią skaičių, vidurkį, medianą.
 
+pakelta_kvadratu = list(map(lambda x: x**2, paprasti_sk)) # butina idet map i list, nes kitu atveju gaunu empty.
+print(f" Skaičių kvadratai: {list(pakelta_kvadratu)}")
 
+print(f" Kvadratų suma: {sum(pakelta_kvadratu)}")
+print(f" Mažiausias skaičius: {min(pakelta_kvadratu)}")
+print(f" Didžiausias skaičius: {max(pakelta_kvadratu)}")
+print(f" Vidurkis: {mean(pakelta_kvadratu)}")
+print(f" Mediana: {median(pakelta_kvadratu)}")
+
+# 1.6. Surūšiuotų ir atspausdintų kvadratų sąrašą atbulai
+mazejanciai = sorted(pakelta_kvadratu, reverse=True)
+print(f"\n Mažėjimo tvarka: {mazejanciai}")
