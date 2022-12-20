@@ -10,7 +10,7 @@ class Zmogus:
         self.amzius = amzius
 
     def __repr__(self):
-        return f"({self.vardas}, {self.amzius})"
+        return f"{self.vardas}, {self.amzius}"
 
 
 # 4.3. Inicijuoti kelis Zmogus objektus su vardais ir amžiais.
@@ -40,5 +40,5 @@ rusiuojam = sorted(jie, key=attrgetter("amzius"))
 print(f" Didėjančiai pagal amžių: {rusiuojam}")
 
 # pagal amziu mazejanciai
-rusiuojam = sorted(jie, key=attrgetter("amzius"))
+rusiuojam = sorted(jie, key=attrgetter("amzius"), reverse=True)
 print(f" Mažėjančiai pagal amžių: {rusiuojam}")
